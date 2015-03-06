@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{673B30CD-A3A4-44E3-8F5E-1EE03B16AC3D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gamoya.Common.Weather</RootNamespace>
+    <AssemblyName>Gamoya.Common.Weather</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="PrecipitationType.cs" />
+    <Compile Include="Temperature.cs" />
+    <Compile Include="WeatherPeriodData.cs" />
+    <Compile Include="Location.cs" />
+    <Compile Include="WeatherPointData.cs" />
+    <Compile Include="WeatherProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeatherProviderFeatures.cs" />
+    <Compile Include="WeatherCondition.cs" />
+    <Compile Include="WeatherPoint.cs" />
+    <Compile Include="WeatherPeriod.cs" />
+    <Compile Include="WeatherProviders\ForecastIO\Alert.cs" />
+    <Compile Include="WeatherProviders\ForecastIO\DailyWeather.cs" />
+    <Compile Include="WeatherProviders\ForecastIO\Excludes.cs" />
+    <Compile Include="WeatherProviders\ForecastIO\Flags.cs" />
+    <Compile Include="WeatherProviders\ForecastIO\Forecast.cs" />
+    <Compile Include="WeatherProviders\ForecastIO\ForecastIOWeatherProvider.cs" />
+    <Compile Include="WeatherProviders\ForecastIO\MinutelyWeather.cs" />
+    <Compile Include="WeatherProviders\ForecastIO\Units.cs" />
+    <Compile Include="WeatherProviders\ForecastIO\Weather.cs" />
+    <Compile Include="WeatherProviders\ForecastIO\WeatherResponse.cs" />
+    <Compile Include="WeatherProviders\MetWit\EnumDescriptionTypeConverter.cs" />
+    <Compile Include="WeatherProviders\MetWit\GeoJson\Point.cs" />
+    <Compile Include="WeatherProviders\MetWit\GeoJson\Position.cs" />
+    <Compile Include="WeatherProviders\MetWit\MetwitWeatherProvider.cs" />
+    <Compile Include="RestSharpJsonDeserializer.cs" />
+    <Compile Include="WeatherProviders\MetWit\Weather.cs" />
+    <Compile Include="WeatherProviders\MetWit\WeatherFelt.cs" />
+    <Compile Include="WeatherProviders\MetWit\WeatherLocation.cs" />
+    <Compile Include="WeatherProviders\MetWit\WeatherMeasured.cs" />
+    <Compile Include="WeatherProviders\MetWit\WeatherPoint.cs" />
+    <Compile Include="WeatherProviders\MetWit\WeatherResponse.cs" />
+    <Compile Include="WeatherProviders\MetWit\WeatherStatus.cs" />
+    <Compile Include="WeatherProviders\OpenWeatherMap\City.cs" />
+    <Compile Include="WeatherProviders\OpenWeatherMap\Clouds.cs" />
+    <Compile Include="WeatherProviders\OpenWeatherMap\Coordinates.cs" />
+    <Compile Include="WeatherProviders\OpenWeatherMap\DailyTemperature.cs" />
+    <Compile Include="WeatherProviders\OpenWeatherMap\HourlyWeather.cs" />
+    <Compile Include="WeatherProviders\OpenWeatherMap\DailyWeather.cs" />
+    <Compile Include="WeatherProviders\OpenWeatherMap\DailyWeatherResponse.cs" />
+    <Compile Include="WeatherProviders\OpenWeatherMap\HourlyWeatherResponse.cs" />
+    <Compile Include="WeatherProviders\OpenWeatherMap\Main.cs" />
+    <Compile Include="WeatherProviders\OpenWeatherMap\OpenWeatherMapWeatherProvider.cs" />
+    <Compile Include="WeatherProviders\OpenWeatherMap\Precipitation.cs" />
+    <Compile Include="WeatherProviders\OpenWeatherMap\Weather.cs" />
+    <Compile Include="WeatherProviders\OpenWeatherMap\WeatherLocation.cs" />
+    <Compile Include="WeatherProviders\OpenWeatherMap\CurrentWeatherResponse.cs" />
+    <Compile Include="WeatherProviders\OpenWeatherMap\Wind.cs" />
+    <Compile Include="WeatherProviders\WorldWeatherOnline\WeatherArea.cs" />
+    <Compile Include="WeatherProviders\WorldWeatherOnline\WeatherCurrentCondition.cs" />
+    <Compile Include="WeatherProviders\WorldWeatherOnline\WeatherData.cs" />
+    <Compile Include="WeatherProviders\WorldWeatherOnline\WeatherDescription.cs" />
+    <Compile Include="WeatherProviders\WorldWeatherOnline\WeatherForecast.cs" />
+    <Compile Include="WeatherProviders\WorldWeatherOnline\WeatherRequest.cs" />
+    <Compile Include="WeatherProviders\WorldWeatherOnline\WeatherResponse.cs" />
+    <Compile Include="WeatherProviders\WorldWeatherOnline\WorldWeatherOnlineWeatherProvider.cs" />
+    <Compile Include="WeatherProviders\Yahoo\YahooWeatherProvider.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SD-Concept\IQ-Board\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\..\..\SD-Concept\IQ-Board\packages\RestSharp.105.0.1\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
